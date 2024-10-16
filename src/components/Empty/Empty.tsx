@@ -8,7 +8,9 @@ export const Empty = ({ isError }: Props) => {
   return (
     <div className="flex flex-col my-14 items-center">
       <Image
-        className="max-w-[200px] mix-blend-hard-light 768:max-w-[420px]"
+        width={420}
+        height={200}
+        className="max-w-[200px] h-auto mix-blend-hard-light 768:max-w-[420px]"
         src="/assets/empty2.png"
         alt="No-data"
       />
