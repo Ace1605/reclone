@@ -1,0 +1,8 @@
+{
+  "name": "Aku Assessment",
+  "short_name": "Aku Assessment",
+  "background_color": "#581689",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/"
+}
