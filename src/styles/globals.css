@@ -36,3 +36,15 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+  overflow: overlay;
+}
+
+.thin-scrollbar::-webkit-scrollbar,
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -24,7 +24,7 @@ export const List = ({ user }: ListProps) => {
       }}
       key={user.id}
       className={clsx(
-        "flex justify-between py-2 768:py-3 px-3 768:px-5 bg-neutral-100 shadow-sm max-h-custom-dvh items-center gap-2 my-3 rounded-[10px]"
+        "flex justify-between py-2 768:py-3 px-3 768:px-5 bg-neutral-100 shadow-sm items-center gap-2 my-3 rounded-[10px]"
       )}
     >
       <div className="flex items-center gap-4">

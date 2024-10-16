@@ -45,9 +45,11 @@ export default function Home() {
       ) : data?.length === 0 || data === undefined ? (
         <Empty />
       ) : (
-        data?.map((user) => {
-          return <List key={user.id} user={user} />;
-        })
+        <div className="max-h-custom-dvh thin-scrollbar overflow-y-scroll">
+          {data?.map((user) => {
+            return <List key={user.id} user={user} />;
+          })}
+        </div>
       )}
     </div>
   );
