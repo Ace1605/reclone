@@ -52,7 +52,7 @@ describe("useSearchGitHub", () => {
     );
   });
 
-  test("handles fetch errors gracefully", async () => {
+  test("handles fetch errors", async () => {
     const mockQuery = "error";
     const mockSearchType = "users";
 

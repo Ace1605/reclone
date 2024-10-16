@@ -1,6 +1,6 @@
-import { ActionEnum, SearchFormProps } from "@/types";
+import { ActionEnum, SearchFormProps, SearchType } from "@/types";
 import React, { useEffect, useReducer, useState } from "react";
-import { radioInputs } from "./contants";
+import { radioInputs } from "./constants";
 import { initialState, reducer } from "@/context/AppContext";
 import { useRouter } from "next/router";
 
@@ -14,15 +14,15 @@ export const SearchForm: React.FC = () => {
   const handleSearchTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: ActionEnum.SetSearchType,
-      payload: e.target.value as "users" | "organizations",
+      payload: e.target.value as SearchType,
     });
-    // Update the URL with the new search type and current query, keeping shallow routing to avoid page reload
+
     router.push(
       {
         pathname: "/",
         query: {
-          query, // Keep current query in the URL
-          searchType: e.target.value as "users" | "organizations",
+          query,
+          searchType: e.target.value as SearchType,
         },
       },
       undefined,
@@ -30,12 +30,11 @@ export const SearchForm: React.FC = () => {
     );
   };
 
-  // Handle form submission when the user clicks the search button
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch({ type: ActionEnum.SetQuery, payload: query }); // Dispatch action to update the query in state
+    dispatch({ type: ActionEnum.SetQuery, payload: query });
 
-    // Update the URL with the current search query and type
     router.push(
       {
         pathname: "/",
@@ -46,7 +45,6 @@ export const SearchForm: React.FC = () => {
     );
   };
 
-  // useEffect to sync the query state with the URL when the component mounts or URL query changes
   useEffect(() => {
     if (router.query.query) {
       setQuery(router.query.query as string);

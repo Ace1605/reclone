@@ -16,6 +16,9 @@ This is a simple web application built using Next.js, React, TypeScript, and Tai
 
 ## Task Requirements
 
+## Fallback Image Handling
+During development, an issue was encountered where some GitHub avatar_urls would fail to load, causing errors in the UI. To handle this, a fallback image is used in place of broken avatar_urls. This ensures that even if there are issues with the provided avatar URLs, the application continues to display a default image and maintains its functionality.
+
 ## Installation and Running the App
 
 1. Install dependencies and start the development server:

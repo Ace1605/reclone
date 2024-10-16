@@ -6,7 +6,7 @@ import { Loader } from "@/components/modules/Loader";
 import { Empty } from "@/components/Empty/Empty";
 import { useRouter } from "next/router";
 import { List } from "@/components/modules/List";
-import { ActionEnum } from "@/types";
+import { ActionEnum, SearchType } from "@/types";
 import { Header } from "@/components/modules/Header";
 
 export default function Home() {
@@ -18,16 +18,16 @@ export default function Home() {
     searchType,
   });
 
-  // Sync the URL query parameters with the local state on component mount or when the URL changes
+  // Sync the URL query parameters with the local state on component mount or url update
   useEffect(() => {
     if (router.query.query) {
       dispatch({
-        type: ActionEnum.SetQuery, // Dispatch action to update the query in the state
-        payload: router.query.query as string, // Set query from the URL query string
+        type: ActionEnum.SetQuery,
+        payload: router.query.query as string,
       });
       dispatch({
-        type: ActionEnum.SetSearchType, // Dispatch action to update the search type in the state
-        payload: router.query.searchType as "users" | "organizations", // Set search type from the URL query string
+        type: ActionEnum.SetSearchType,
+        payload: router.query.searchType as SearchType,
       });
     }
   }, [router.query]);
@@ -38,7 +38,6 @@ export default function Home() {
         <Header />
         <SearchForm />
       </div>
-      {/* Conditional rendering for API states: error, loading, empty, or results */}
       {isError ? (
         <Empty isError={isError} />
       ) : isLoading ? (
