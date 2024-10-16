@@ -1,4 +1,4 @@
-import { Spinner } from "./svgs/Spinner";
+import { Spinner } from "../svgs/Spinner";
 
 export const Loader = () => {
   return (

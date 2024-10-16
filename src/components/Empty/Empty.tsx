@@ -1,11 +1,9 @@
 import clsx from "clsx";
 
 interface Props {
-  type?: "users" | "organizations";
-  search?: string;
   isError?: boolean;
 }
-export const Empty = ({ type, search, isError }: Props) => {
+export const Empty = ({ isError }: Props) => {
   return (
     <div className="flex flex-col my-14 items-center">
       <img
@@ -18,14 +16,8 @@ export const Empty = ({ type, search, isError }: Props) => {
           Oops...Looks like something went wrong
         </p>
       ) : (
-        <p
-          className={clsx(
-            type === "users" ? "px-[50px]" : "px-7",
-            "text-center mt-2 768:px-0"
-          )}
-        >
-          There is no available result for the {type} search{" "}
-          <span className="font-bold">{search}</span>
+        <p className={clsx("px-7 text-center mt-2 768:px-0")}>
+          There is no available result
         </p>
       )}
     </div>

@@ -1,0 +1,1 @@
+export const radioInputs = [{label: 'Users', value: 'users'}, {label: 'Organizations', value: 'organizations'}]
