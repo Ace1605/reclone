@@ -8,7 +8,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({
 }) => {
   return (
     <form onSubmit={onSubmit} className="py-4">
-      <div className="mb-4 flex items-center gap-4">
+      <div className="mb-4 flex flex-col 640:flex-row items-center gap-4">
         <input
           type="text"
           name="query"
@@ -18,7 +18,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({
         />
         <button
           type="submit"
-          className="bg-primary-main text-white py-2 px-6 font-medium rounded-[10px] h-[48px]"
+          className="bg-primary-main text-white py-2 px-6 w-full 640:w-auto font-medium rounded-[10px] h-[48px]"
         >
           Search
         </button>

@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="description" content="Aku Assessment" />
+        <link rel="icon" href="/assets/aku-image.svg" />
       </Head>
       <body>
         <Main />

@@ -46,12 +46,18 @@ const config: Config = {
           750: '#2D2D2D',
           810: '#D0D5DD',
           900: '#24292E',
-          1000: '#1A1D1F',
-          main: '#03144D',
         },
+        cream: {
+          main: '#ded5bf'
+        }
+      },
+      maxHeight: {
+        'custom-dvh': 'calc(100dvh - 280px)'
       },
       animation: {
-        float: 'float 2s linear infinite',
+        float: 'float 0.5s linear infinite',
+        float_a: 'float 2.5s linear infinite',
+        float_b: 'float 1.5s linear infinite',
       },
       keyframes: {
         float: {
