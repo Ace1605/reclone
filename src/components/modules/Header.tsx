@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { GitHub } from "../svgs/General";
 import asset from "/public/assets/aku-image.svg";
-import Link from "next/link";
 
 export const Header = () => {
   return (

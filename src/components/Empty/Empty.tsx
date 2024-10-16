@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 
 interface Props {
   isError?: boolean;
@@ -6,7 +7,7 @@ interface Props {
 export const Empty = ({ isError }: Props) => {
   return (
     <div className="flex flex-col my-14 items-center">
-      <img
+      <Image
         className="max-w-[200px] mix-blend-hard-light 768:max-w-[420px]"
         src="/assets/empty2.png"
         alt="No-data"

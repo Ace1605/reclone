@@ -2,6 +2,7 @@
 import { SearchResult } from "@/types";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -27,7 +28,7 @@ export const List = ({ user }: ListProps) => {
       )}
     >
       <div className="flex items-center gap-4">
-        <img
+        <Image
           src={!avatarLoaded ? "/assets/fallback.png" : user.avatar_url}
           className="w-10 h-10 rounded-full border border-primary-main object-cover"
           alt={`${user.login} avatar`}

@@ -1,4 +1,4 @@
-import { ActionEnum, SearchFormProps, SearchType } from "@/types";
+import { ActionEnum, SearchType } from "@/types";
 import React, { useEffect, useReducer, useState } from "react";
 import { radioInputs } from "./constants";
 import { initialState, reducer } from "@/context/AppContext";

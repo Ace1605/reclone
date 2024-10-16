@@ -24,7 +24,8 @@ export const useSearchGitHub = ({ query, searchType }: UseSearchGitHubParams) =>
       return data.items;
 
     } catch (error) {
-      throw new Error('Something went wrong while fetching search results.');
+
+      throw new Error(`Something went wrong while fetching search results. ${error}`);
     }
   };
 
