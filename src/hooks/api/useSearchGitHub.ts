@@ -13,7 +13,7 @@ export const useSearchGitHub = ({ query, searchType }: UseSearchGitHubParams) =>
       // Determine the search type for the API query (either user or organization)
       const type = searchType === 'organizations' ? 'org' : 'user';
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users?q=${query}+type:${type}`);
+      const response = await fetch(`https://api.github.com/search/users?q=${query}+type:${type}`);
 
       if (response?.status !== 200) {
         throw new Error('Failed to fetch search results');

@@ -48,7 +48,7 @@ describe("useSearchGitHub", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      `${process.env.NEXT_PUBLIC_API_URL}/users?q=${mockQuery}+type:user`
+      `https://api.github.com/search/users?q=${mockQuery}+type:user`
     );
   });
 
@@ -84,7 +84,7 @@ describe("useSearchGitHub", () => {
     });
 
     expect(fetch).toHaveBeenCalledWith(
-      `${process.env.NEXT_PUBLIC_API_URL}/users?q=${mockQuery}+type:user`
+      `https://api.github.com/search/users?q=${mockQuery}+type:user`
     );
   });
 });
